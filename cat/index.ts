@@ -20,5 +20,6 @@ function setup() {
     strokeWeight(2)
     line(170,170,210,170)
     line(130,170,100,170)
+    
 
 }
