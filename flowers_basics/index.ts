@@ -3,8 +3,8 @@
 function setup {
   createCanvas (1000,1000)
   
-  noStroke()
-  
+  noStroke() 
+
   
   strokeWeight(20)
   fill("green")
@@ -19,8 +19,10 @@ function setup {
   circle(110, 140, 80)
 
   noStroke()
-  fill("yellow")
+  fill("yellow") 
   circle(100, 90, 65) 
   
 
+  
+  
 }
