@@ -1,16 +1,32 @@
 // <<< ADD CONSTANTS HERE (if you need them)
-createCanvas (1000, 1000)
 
-function setup() {
-  // <<< ADD YOUR CODE HERE
-  noStroke("green")
-  fill ("green")
-  circle (80, 70, 80)
+function setup {
+  createCanvas (1000,1000)
+  
+  noStroke()
+  
   
   strokeWeight(20)
+  fill("green")
+  circle(50, 100, 80)
+
+  circle(80, 40, 80)
+  fill("green")
+  strokeWeight(25)
+
+  circle(150, 70, 80)
+  
+  circle(110, 140, 80)
+
+  noStroke()
   fill("yellow")
-  circle(40, 50, 80)
-  circle(50, 50, 70)
+  circle(100, 90, 65) 
+  
+
+  arc (30,60,70)
+  
+
+
 
   
   
