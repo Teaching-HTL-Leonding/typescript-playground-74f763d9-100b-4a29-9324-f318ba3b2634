@@ -10,7 +10,8 @@ function setup() {
 //Globale Variable
 let color_hue: number = 0; 
 
-function mouseMoved() {
+
+function mouseClicked() {
     fill(color_hue, 100, 100);
     circle(mouseX, mouseY, 40);
     color_hue = color_hue + 5;
