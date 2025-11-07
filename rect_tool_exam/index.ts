@@ -14,7 +14,7 @@ function mouseMoved () {
     let mouseX = Math.abs( mouseX - width/2 * 2);
     mouseX = Math.round (mouseX / gridSize) * gridSize;
     let mouseY = Math.abs ( mouseY - height/2 * 2);
-    mouseY= Math.round (mouseY/ gridSize) * gridSize;
+    mouseY= Math.round (mouseY/ gridSize) * gridSize;  
 
     rect = mouseX * mouseY
   
