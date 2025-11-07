@@ -10,35 +10,32 @@ function mouseMoved () {
     background("black");
     strokeWeight(2);
     noFill();
+    
+    let mouseX = Math.abs( mouseX - width/2 * 2);
+    mouseX = Math.round (mouseX / gridSize) * gridSize;
+    let mouseY = Math.abs ( mouseY - height/2 * 2);
+    mouseY= Math.round (mouseY/ gridSize) * gridSize;
 
-    let diameterX = Math.abs((mouseX - width / 2) * 2);
-    diameterX = Math.round ( mouseX / gridSize * 2);
-    let diameterY = Math.abs ((mouseY - height / 2) * 2)
-    diameterX = Math.round (mouseY / gridSize * 2)
-
-    stroke("green");
-    arc(width/2, height/2, diameterX, diameterY, 0, 90);
-    stroke("pink");
-    arc(width/2, height/2, diameterX, diameterY, 90, 180);
-    stroke("gray");
-    arc(width/2, height/2, diameterX, diameterY, 180, 270);
+    rect = mouseX * mouseY
+  
     stroke("red");
-    arc(width/2, height/2, diameterX, diameterY, 270, 360);
-    
-    
+    arc(width/2, height/2, mouseX, mouseY, 40, 80);
+
+    stroke("yellow");
+    arc(width/2, height/2, mouseX, mouseY, 80, 160);
+
+    stroke("aqua")
+    arc(width/2, height/2, mouseX, mouseY, 160, 320);
+
+    stroke("lime");
+    arc(width/2, height/2, mouseX, mouseY, 320, 640);
 
 
-
-
-
-
-
-
-
-
-
-
-
+    stroke("lightgray");
+    strokeWeight(1);
+    textAlign(LEFT);
+    const area = Math.round(width * height / 2 * Math.PI);
+    text(`Area: ${area}`, 5, height - 10);  
 
 
 
