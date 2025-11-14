@@ -1,23 +1,18 @@
 function setup() {
-    createCanvas(400,400);
+    createCanvas(400, 400);
     background("hotpink");
 }
 
-let x: number = 0;
-let direction: number = 1;
-
 function draw() {
     background("hotpink");
+    stroke("white");
     fill("darkblue");
-    circle(x, 200, 50);
-    x += direction;
+    rect(width / 2 - 50, height / 2 - 25, 100, 50);
 
-    // === gleich
-    // !== nicht gleich
-    // >, >=, <, <= Vergleiche
-    if (x === width) { direction = -5; }
-    if (x === 0) {direction = 5;}
- }
+    if (mouseX >= width / 2 - 50 && mouseX <= width / 2 + 50
+    && mouseY >= height / 2 - 25 && mouseY <= height / 2 + 25) {
+        text("drinnen" , 10, 10);
+    }
 
- // Bedingungen
-// if Statements 
+
+}
