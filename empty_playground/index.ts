@@ -1,19 +1,23 @@
 function setup() {
-    createCanvas(300, 300);
-    background("black");
-    colorMode(HSB);
-    
+    createCanvas(400,400);
+    background("hotpink");
 }
 
 let x: number = 0;
-let colorHue: number = 0;
+let direction: number = 1;
 
 function draw() {
-    background("black");
-    noStroke();
-    fill(colorHue, 100, 100);
-    colorHue = (colorHue + 1) % 360;
-    circle(x, x, x);
-    x += 1; // the same as x += 1, same as x++
-    x = x %  300;
-}
+    background("hotpink");
+    fill("darkblue");
+    circle(x, 200, 50);
+    x += direction;
+
+    // === gleich
+    // !== nicht gleich
+    // >, >=, <, <= Vergleiche
+    if (x === width) { direction = -5; }
+    if (x === 0) {direction = 5;}
+ }
+
+ // Bedingungen
+// if Statements 
