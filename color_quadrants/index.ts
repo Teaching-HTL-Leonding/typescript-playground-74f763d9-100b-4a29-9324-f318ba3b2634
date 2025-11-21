@@ -12,7 +12,7 @@ function setup() {
     fill("green");
     rect(width / 2, height / 2, width / 2, height /2);
 
-    fill("yellow");
+    fill("blue");
     rect( 0, height / 2, width / 2, height / 2);
 
     fill("black");
@@ -20,7 +20,27 @@ function setup() {
     
 }
 
-function moveClicked () {
+function mouseClicked () {
+    fill("black");
+    rect( width / 4 , height / 2 - height / 4 / 2, width / 2, height / 4);
+
+    noStroke()
+    fill("white")
+    textSize(30);
+    textAlign(CENTER, CENTER);
+
+    let t: string 
+    if (mouseX < width / 2) { 
+        if (mouseY < height / 2) { t = "orange"}
+        else { t = "blue"}
+        }
+    else if ( mouseX < width / 2 * 2) { 
+        if ( mouseY < height / 2) { t = "red"}
+        else t= "green"
+
+    }
+
+    text ( t, width / 2, height - 100 )
 
 
 
