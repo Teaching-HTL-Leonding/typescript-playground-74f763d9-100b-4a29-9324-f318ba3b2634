@@ -1,45 +1,63 @@
 function setup() {
-  createCanvas(300, 200);
+  createCanvas(400, 400);
 }
 
-const circleDiameter = 70;
+const circleDiameter = 50;
 
-let circleCenterX = 0;
+let circleCenterX = 100;
 let circleCenterY = 0;
-let directionHorizontal = 3;
-let directionVertical = 3;
+let directionX = 2; 
+let directionY = 2;
+let directionX1 = 2; 
+let directionY1 = 2;
+let circleCenterX1 = 100;
+let circleCenterY1 = 0;
 
 
-// Remember: The _draw_ method is called FOR EVERY FRAME
+
+
+
 function draw() {
   background("gold");
 
   stroke("white");
-  strokeWeight(4);
+  strokeWeight(3);
   fill("lime");
-  circle(circleCenterX, height / 2, circleDiameter);
+  circle(circleCenterX, circleCenterY, circleDiameter);
 
-  fill("blue");
-  circle(width / 2, circleCenterY, circleDiameter);
+  circleCenterX += directionX;
+  circleCenterY += directionY;
 
-  circleCenterX += directionHorizontal;
-  circleCenterY += directionVertical;
+  if (circleCenterY >= height || circleCenterY <= 0) {
+    directionY *= -1;
+  }
 
+  if (circleCenterX >= width || circleCenterX <=0) {  
+    directionX *= -1;
+  }
   
 
-  //                         +----------------------------- OR operator
-  //                         |
-  //                         v
-  if (circleCenterX >= width || circleCenterX <= 0) {
-    directionHorizontal *= -1;
-  }
+  fill("blue");
+  circle(circleCenterY, circleCenterX, circleDiameter);
+
+  circleCenterX += directionX1;
+  circleCenterY += directionY1;
 
 
   if (circleCenterY >= height || circleCenterY <= 0) {
-    directionVertical *= -1;
+    directionY *= -1; 
   }
 
+  if (circleCenterX >= width || circleCenterX <=0) {  
+    directionX *= -1;
+  }
+  
+
+
+
+
+
+
+  
+
 }
-
-
-
