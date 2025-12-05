@@ -38,7 +38,8 @@ function draw() {
 
     text(counter, x, y); 
 
-    if ( counter === 0) { speedX = 0 , speedY= 0}; 
+    if ( counter === 0) { speedX = 0 , speedY = 0}; 
+    
 
 
 
