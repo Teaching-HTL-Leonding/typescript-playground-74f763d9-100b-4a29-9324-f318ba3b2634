@@ -27,24 +27,24 @@ function draw() {
     x += speedX
     y += speedY
 
-    if (x <= 0|| x >= width) {
+    if (x <= 0 || x >= width) {
         speedX *= -1;
         counter -= 1
     }
-    if ( y <= 0 || y >= height) {
-        speedY *= -1; 
+    if (y <= 0 || y >= height) {
+        speedY *= -1;
         counter -= 1
     }
 
-    text(counter, x, y); 
+    text(counter, x, y);
 
-    if ( counter === 0) { speedX = 0 , speedY = 0}; 
-    
-
+    if (counter === 0) { speedX = 0, speedY = 0 };
 
 
 
-    
+
+
+
 
 
 
@@ -57,6 +57,6 @@ function draw() {
 
 
 
-    
+
 
 
