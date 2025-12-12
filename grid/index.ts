@@ -27,7 +27,6 @@ function setup() {
     }
 
     for (let j = GRID; j < SIZE; j += GRID) {
-        fill("black");
         line(0, j, SIZE, j);
     }
         
