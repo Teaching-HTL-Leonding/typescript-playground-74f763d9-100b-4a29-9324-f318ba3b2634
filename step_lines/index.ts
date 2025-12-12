@@ -32,9 +32,16 @@ function setup() {
         i += GRID;
     }
 
-
-    stroke("red");
+    stroke("red")
     i = GRID;
+    while (i < SIZE) {
+        line(SIZE - GRID, i, GRID + i - GRID, i);
+        i += GRID;
+    }
+
+
+    
+
     
 
 
