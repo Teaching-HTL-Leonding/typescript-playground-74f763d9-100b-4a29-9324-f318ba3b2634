@@ -9,25 +9,11 @@ function setup() {
 
 
     let x = 1;
-    while (x < 8) {  
+    while (x < 8) {
 
         fill("yellow");
         noStroke();
         rect(0, x * STRIPE_THICKNESS, width, STRIPE_THICKNESS);
-        x+=2
-
-
-
-
-
-
-
-
-
-
-
-
+        x += 2
     }
-
-
 }
