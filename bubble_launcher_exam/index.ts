@@ -1,14 +1,10 @@
-let circleX: number = 0;
-let circleY: number = 150;
-let direction: number = 1;
+let circleX: number[] = [];
+let circleY: number[] = [];
+let direction: number[] = [];
 
 const SPEED: number = 2;
 const RADI: number = 10;
 const DIAM: number = RADI * 2;
-
-let bubble: { x: number, y: number, direction: number }[] = []
-
-
 
 function setup() {
     createCanvas(500, 300);
@@ -17,19 +13,6 @@ function setup() {
 function draw() {
     background("white");
 
-    for (let i = 0; i < bubble.length; i++) {
-        bubble = bubble[i]
-        fill("lightgray")
-        stroke("darkgray")
-        circle(bubble.x, bubble.y, DIAM)
-    }
-
-    bubble.x += SPEED * bubble.direction
-    if (bubble.x > width || bubble.x < 0) {
-        direction += -1
-
-    }
-
     fill('lightgray');
     stroke('darkgray');
     rect(0, 0, DIAM, height);
@@ -37,21 +20,29 @@ function draw() {
     fill('yellow');
     stroke('gold');
 
-    circle(circleX, circleY, DIAM);
+    circle(10, mouseY - 10, DIAM);
 
-    circleX += SPEED * direction;
-    if (circleX - RADI < 0 || circleX + RADI > width) {
-        direction *= -1;
-        circleX = max(RADI, min(width - RADI, circleX));
+
+    for (let i = 0; i < circleX.length; i++) {
+
+        circle(circleX[i], circleY[i], DIAM)
+
+        if (circleX[i] - RADI < 0 || circleX[i] + RADI > width) {
+            direction[i] *= -1
+
+        }
+
+        circleX[i] = max(RADI, min(width - RADI, circleX[i]))
+
+        circleX[i] += SPEED * direction[i]
+
     }
+
+
 }
 
 function mouseClicked() {
-
-    let newBubble = {
-        X: RADI,
-        y: random(RADI, height - RADI),
-        direction: 
-    }
-
+    circleX.push(0)
+    circleY.push(mouseY)
+    direction.push(1)
 }
