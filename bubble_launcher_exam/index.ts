@@ -6,26 +6,27 @@ const SPEED: number = 2;
 const RADI: number = 10;
 const DIAM: number = RADI * 2;
 
-let bubble : { x: number, y: number, direction: number }[] = []
+let bubble: { x: number, y: number, direction: number }[] = []
 
 
 
 function setup() {
-createCanvas(500, 300);
-} 
+    createCanvas(500, 300);
+}
 
 function draw() {
     background("white");
 
-    for (let i = 0; i < bubble.length; i++) { 
-    bubble = bubbles [i]
-    fill("lightgray")
-    stroke("darkgray")
-    circle(bubble.x, bubble.y, DIAM) }
+    for (let i = 0; i < bubble.length; i++) {
+        bubble = bubble[i]
+        fill("lightgray")
+        stroke("darkgray")
+        circle(bubble.x, bubble.y, DIAM)
+    }
 
     bubble.x += SPEED * bubble.direction
     if (bubble.x > width || bubble.x < 0) {
-        bubble.direction += -1
+        direction += -1
 
     }
 
@@ -46,11 +47,11 @@ function draw() {
 }
 
 function mouseClicked() {
+
     let newBubble = {
-        X: RADI, 
-        y : random (RADI , height - RADI ),
-        direction: random () < 0.5 ? -1
+        X: RADI,
+        y: random(RADI, height - RADI),
+        direction: 
     }
 
-    bubbles.push(newBubble)
 }
