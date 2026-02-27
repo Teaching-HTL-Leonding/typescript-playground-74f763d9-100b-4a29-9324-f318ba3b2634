@@ -19,14 +19,12 @@ function flower(x: number, y: number, color: string) {
     translate(x, y)
 
     noStroke()
-    fill(color)
-
+    fill(color) 
 
     circle(0, -25, 50)
     circle(25, 0, 50)
     circle(0, 25, 50)
     circle(-25, 0, 50)
-
 
     fill("yellow")
     circle(0, 0, 40)
