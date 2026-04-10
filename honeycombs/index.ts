@@ -36,7 +36,6 @@ function drawHexagon() {
 
 }
 
-
 function drawHoneycomb() {
     for (let x = 0; x < 9; x++) {
         push()
