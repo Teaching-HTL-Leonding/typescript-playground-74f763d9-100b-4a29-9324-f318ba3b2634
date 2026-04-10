@@ -20,30 +20,23 @@ function setup() {
     //          (20,50) ──────── (45,50)
     //
     // Each line() call: line(x1, y1, x2, y2)
-    drawHexagon()
+    drawHexagon(0, 10)
 }
 
-function drawHexagon() {
-    for (let x = 0; x < 9; x++) {
-        line(0, 25, 20, 0)
-        line(20, 0, 45, 0)
-        line(45, 0, 65, 25)
-        line(65, 25, 45, 50)
-        line(45, 50, 20, 50)
-        line(20, 50, 0, 25)
+function drawHexagon(xCoord: number, yCoord: number) {
+    line(0, 25, 20, 0)
+    line(20, 0, 45, 0)
+    line(45, 0, 65, 25)
+    line(65, 25, 45, 50)
+    line(45, 50, 20, 50)
+    line(20, 50, 0, 25)
+}
 
-        
+function drawHoneycomb() { 
+    for (let x = 0; x < 9; x++) { 
+    drawHexagon(0, 10)
+
     }
-
-    drawColumn() 
-
-}
-
-function drawColumn ( xCoord: number , yCoord: number) {
-    for (let x = 0; x < 9; x++) {
-        
-
-}
 }
 
 
