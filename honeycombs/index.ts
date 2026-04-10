@@ -31,7 +31,19 @@ function drawHexagon() {
         line(65, 25, 45, 50)
         line(45, 50, 20, 50)
         line(20, 50, 0, 25)
+
+        
     }
+
+    drawColumn() 
+
+}
+
+function drawColumn ( xCoord: number , yCoord: number) {
+    for (let x = 0; x < 9; x++) {
+        
+
+}
 }
 
 
